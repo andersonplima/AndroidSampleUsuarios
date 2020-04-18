@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Usuários</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="list_fragment_label">Lista</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="close">Sair</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Senha</string>
+    <string name="invalid_user">Usuário ou senha inválidos</string>
+    <string name="nome_hint">Nome</string>
+    <string name="endereco_hint">Endereço</string>
+    <string name="idade_hint">Idade</string>
+    <string name="success">Usuário adicionado com sucesso!</string>
+</resources>
