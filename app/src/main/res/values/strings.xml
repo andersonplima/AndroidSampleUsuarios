@@ -19,4 +19,7 @@
     <string name="endereco_hint">Endereço</string>
     <string name="idade_hint">Idade</string>
     <string name="success">Usuário adicionado com sucesso!</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="sexo">Sexo</string>
 </resources>

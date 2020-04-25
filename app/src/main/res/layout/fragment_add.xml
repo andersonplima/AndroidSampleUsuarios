@@ -14,9 +14,15 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="32dp" android:layout_marginBottom="32dp">
+            android:layout_marginBottom="48dp">
+        <ImageView
+                android:src="@drawable/user"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" android:id="@+id/imageView"
+                android:adjustViewBounds="true" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -24,26 +30,66 @@
                 android:ems="10"
                 android:id="@+id/editTextNome" android:hint="@string/nome_hint"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="32dp" android:layout_marginStart="32dp"
-                app:layout_constraintTop_toTopOf="parent"/>
-        <EditText
+                android:layout_marginEnd="16dp" android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginTop="8dp"/>
+        <AutoCompleteTextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/editTextEndereco" app:layout_constraintTop_toBottomOf="@id/editTextNome"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp" android:layout_marginStart="32dp"
-                android:hint="@string/endereco_hint" android:layout_marginEnd="32dp"/>
+                android:layout_height="wrap_content" android:id="@+id/editTextEndereco"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextNome"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:hint="@string/endereco_hint"/>
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/editTextIdade" app:layout_constraintTop_toBottomOf="@+id/editTextEndereco"
+                android:id="@+id/editTextIdade"
                 android:hint="@string/idade_hint" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="32dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="32dp" android:layout_marginTop="16dp"/>
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="@+id/editTextEndereco"
+                android:layout_marginTop="8dp"/>
+        <RadioGroup
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/editTextIdade"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp" android:layout_marginTop="8dp" android:id="@+id/radioGroupSexo">
+            <TextView
+                    android:text="@string/sexo"
+                    android:gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/textView" android:layout_weight="1"/>
+            <RadioButton
+                    android:text="@string/masculino"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/radioButtonMasculino"/>
+            <RadioButton
+                    android:text="@string/feminino"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:id="@+id/radioButtonFeminino"/>
+        </RadioGroup>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" app:layout_constraintTop_toBottomOf="@id/radioGroupSexo"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent">
+            <Spinner
+                    android:layout_width="0dp"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent" android:id="@+id/spinnerEstados" android:spinnerMode="dialog"/>
+            <ImageView
+                    android:src="@android:drawable/menuitem_background"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent" android:id="@+id/imageViewBandeira"
+                    android:adjustViewBounds="false"/>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:src="@android:drawable/ic_menu_save"
